@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Explore Destinations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-intro">
+            <h1>Discover the World's Most Beautiful Places</h1>
+            <p>Join us as we explore breathtaking landscapes, vibrant cultures, and must-visit destinations around the world.</p>
+        </section>
+
+        <section class="blog-list">
+            <div class="blog-post">
+                <img src="images/paris.jpg" alt="Eiffel Tower in Paris">
+                <div class="post-content">
+                    <h2>Paris, France - The City of Love</h2>
+                    <p>Paris is a dream destination for many travelers, famous for its **romantic ambiance, art, fashion, and history**. Stroll along the **Champs-Élysées**, visit the **Louvre Museum**, and enjoy a breathtaking view from the top of the **Eiffel Tower**.</p>
+                    <a href="https://en.wikipedia.org/wiki/Paris" target="_blank" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="images/bali.jpg" alt="Bali Beach">
+                <div class="post-content">
+                    <h2>Bali, Indonesia - A Tropical Paradise</h2>
+                    <p>Bali is a haven for nature lovers and adventure seekers. From **stunning rice terraces in Ubud** to **pristine beaches in Uluwatu**, this island offers something for everyone.</p>
+                    <a href="https://en.wikipedia.org/wiki/Bali" target="_blank" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="images/kyoto.jpg" alt="Kyoto Temple">
+                <div class="post-content">
+                    <h2>Kyoto, Japan - A Glimpse into the Past</h2>
+                    <p>Kyoto, once the capital of Japan, is a city rich in **history and tradition**. Walk through the beautiful **Fushimi Inari Shrine**, explore the charming streets of **Gion**, and witness stunning cherry blossoms.</p>
+                    <a href="https://en.wikipedia.org/wiki/Kyoto" target="_blank" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="images/santorini.jpg" alt="Santorini Greece">
+                <div class="post-content">
+                    <h2>Santorini, Greece - A Postcard-Perfect Destination</h2>
+                    <p>With its **white-washed buildings, blue-domed churches, and stunning sunsets**, Santorini is one of the most **romantic** destinations in the world.</p>
+                    <a href="https://en.wikipedia.org/wiki/Santorini" target="_blank" class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Travel Blog</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
