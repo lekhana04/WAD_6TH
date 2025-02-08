@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        .cart-item img {
+            width: 80px;
+            border-radius: 4px;
+        }
+        .cart-item-details {
+            flex: 2;
+            padding-left: 15px;
+        }
+        .cart-item-details h3 {
+            margin: 0 0 5px;
+            font-size: 18px;
+            color: #333;
+        }
+        .cart-item-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+        .cart-item-price {
+            flex: 1;
+            font-size: 18px;
+            font-weight: bold;
+            color: #007600;
+            text-align: center;
+        }
+        .cart-item-actions {
+            flex: 1;
+            text-align: center;
+        }
+        .quantity-selector {
+            width: 50px;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .remove-btn {
+            color: #ff3333;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: underline;
+            transition: color 0.3s;
+        }
+        .remove-btn:hover {
+            color: #cc0000;
+        }
+        .cart-summary {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .checkout-btn {
+            background-color: #ff9900;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .checkout-btn:hover {
+            background-color: #cc7a00;
+        }
+        @media (max-width: 768px) {
+            .cart-item {
+                flex-wrap: wrap;
+                text-align: center;
+            }
+            .cart-item-details, .cart-item-price, .cart-item-actions {
+                flex: 100%;
+                margin: 10px 0;
+            }
+            .cart-summary {
+                flex-direction: column;
+                text-align: center;
+            }
+            .checkout-btn {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Shopping Cart</h1>
+        
+        <!-- Lipstick -->
+        <div class="cart-item">
+            <img src="images\lakme_lipstick.jpg" alt="Lipstick">
+            <div class="cart-item-details">
+                <h3>Lakmé Matte Lipstick</h3>
+                <p>Seller: Lakmé Cosmetics</p>
+                <p>Delivery by: Feb 10 - Feb 12</p>
+            </div>
+            <div class="cart-item-price">₹599</div>
+            <div class="cart-item-actions">
+                <input type="number" value="1" min="1" class="quantity-selector" data-price="599">
+                <br>
+                <button class="remove-btn">Remove</button>
+            </div>
+        </div>
+
+        <!-- Foundation -->
+        <div class="cart-item">
+            <img src="images\maybelline_foundation.jpg" alt="Foundation">
+            <div class="cart-item-details">
+                <h3>Maybelline Fit Me Foundation</h3>
+                <p>Seller: Maybelline India</p>
+                <p>Delivery by: Feb 11 - Feb 13</p>
+            </div>
+            <div class="cart-item-price">₹799</div>
+            <div class="cart-item-actions">
+                <input type="number" value="1" min="1" class="quantity-selector" data-price="799">
+                <br>
+                <button class="remove-btn">Remove</button>
+            </div>
+        </div>
+
+        <!-- Shoes -->
+        <div class="cart-item">
+            <img src="images\nike_shoes.png" alt="Shoes">
+            <div class="cart-item-details">
+                <h3>Nike Running Shoes</h3>
+                <p>Seller: Nike Official</p>
+                <p>Delivery by: Feb 15 - Feb 17</p>
+            </div>
+            <div class="cart-item-price">₹3,499</div>
+            <div class="cart-item-actions">
+                <input type="number" value="1" min="1" class="quantity-selector" data-price="3499">
+                <br>
+                <button class="remove-btn">Remove</button>
+            </div>
+        </div>
+
+        <!-- Headphones -->
+        <div class="cart-item">
+            <img src="images\sony_headphones.jpg" alt="Headphones">
+            <div class="cart-item-details">
+                <h3>Sony Wireless Headphones</h3>
+                <p>Seller: Sony Electronics</p>
+                <p>Delivery by: Feb 12 - Feb 14</p>
+            </div>
+            <div class="cart-item-price">₹2,999</div>
+            <div class="cart-item-actions">
+                <input type="number" value="1" min="1" class="quantity-selector" data-price="2999">
+                <br>
+                <button class="remove-btn">Remove</button>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <span class="total">Total: ₹<span id="cart-total">7896</span></span>
+            <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <script>
+        function updateTotal() {
+            let total = 0;
+            document.querySelectorAll(".quantity-selector").forEach(input => {
+                const price = parseFloat(input.dataset.price);
+                const quantity = parseInt(input.value);
+                total += price * quantity;
+            });
+            document.getElementById("cart-total").textContent = total.toFixed(2);
+        }
+
+        document.querySelectorAll(".quantity-selector").forEach(input => {
+            input.addEventListener("change", updateTotal);
+        });
+
+        document.querySelectorAll(".remove-btn").forEach(button => {
+            button.addEventListener("click", function() {
+                this.closest(".cart-item").remove();
+                updateTotal();
+            });
+        });
+
+        updateTotal(); // Ensure the total is accurate on load
+    </script>
+</body>
+</html>
